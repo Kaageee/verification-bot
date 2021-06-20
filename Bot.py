@@ -36,8 +36,5 @@ async def on_raw_reaction_add(payload):
             role = discord.utils.get(user.guild.roles, name=settings.rolename)
             await user.add_roles(role)
 
-@bot.command()
-async def test(ctx):
-    await ctx.send("test")
 
 bot.run(settings.TOKEN)
